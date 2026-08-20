@@ -6,7 +6,7 @@ Print "Digite as horas"
 input HORAS
 MINUTOS = HORAS * 60
 SEGUNDOS = MINUTOS * 60
-Print HORAS
-Print MINUTOS
-Print SEGUNDOS
+Print HORAS; " Horas"
+Print MINUTOS; " Minutos"
+Print SEGUNDOS; " Segundos"
 Sleep
