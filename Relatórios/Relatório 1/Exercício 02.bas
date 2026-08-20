@@ -9,3 +9,4 @@ While PINACESSO <> PINFIXO
     Input PINACESSO
 Wend
 Print "Transacao autorizada!"
+Sleep
