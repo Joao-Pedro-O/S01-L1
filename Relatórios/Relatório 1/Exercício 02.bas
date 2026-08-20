@@ -3,7 +3,7 @@ Dim PINACESSO As integer
 
 PINFIXO = 4321
 Print "Digite o PIN"
-input PINACESSO
+Input PINACESSO
 While PINACESSO <> PINFIXO
     Print "PIN invalido. Tente novamente."
     Input PINACESSO
