@@ -3,7 +3,7 @@ Dim MINUTOS As integer
 Dim SEGUNDOS As integer
 
 Print "Digite as horas"
-input HORAS
+Input HORAS
 MINUTOS = HORAS * 60
 SEGUNDOS = MINUTOS * 60
 Print HORAS; " Horas"
