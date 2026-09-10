@@ -14,8 +14,8 @@ func main() {
 
 	for {
 		fmt.Print("Digite o código de rastreio: ")
-		fmt.Println()
 		fmt.Scanln(&codigo)
+		fmt.Print(codigo,"\n")
 
 		valido, mensagem := ValidarCodigoRastreio(codigo)
 
