@@ -35,4 +35,44 @@ int main() {
                 cout << "Erro: Celula solar ja esta em operacao!" << endl;
             }
         }
-        else if (opcao == 2)
+        else if (opcao == 2) {
+            cout << "--- Mapa da Matriz Solar ---" << endl;
+            for (int i = 0; i < 5; i++) {
+                for (int j = 0; j < 5; j++) {
+                    cout << "[" << matriz_solar[i][j] << "] ";
+                }
+                cout << endl;
+            }
+        }
+        else if (opcao == 3) {
+            break;
+        }
+        else {
+            cout << "Opcao invalida. Tente novamente." << endl;
+        }
+    }
+
+    // Relatorio final: percorre a matriz uma ultima vez
+    int ativas = 0;
+    int inativas = 0;
+
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (matriz_solar[i][j] == 1) {
+                ativas = ativas + 1;
+            } else {
+                inativas = inativas + 1;
+            }
+        }
+    }
+
+    float percentual = (float(ativas) / 25) * 100;
+
+    cout << "=== RELATORIO FINAL DE OPERACAO ===" << endl;
+    cout << "Total de celulas ATIVAS: " << ativas << endl;
+    cout << "Total de celulas INATIVAS: " << inativas << endl;
+    cout << fixed << setprecision(2);
+    cout << "Capacidade Operacional: " << percentual << "%" << endl;
+
+    return 0;
+}
