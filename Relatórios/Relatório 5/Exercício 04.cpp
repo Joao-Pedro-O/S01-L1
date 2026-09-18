@@ -1,19 +1,23 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-int main() {
+int main() 
+{
     int matriz_solar[5][5];
 
-    // Inicializando todas as células com 0 (inativas)
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
+    for (int i = 0; i < 5; i++) 
+    {
+        for (int j = 0; j < 5; j++) 
+        {
             matriz_solar[i][j] = 0;
         }
     }
 
     int opcao;
 
-    while (true) {
+    while (true) 
+    {
         cout << "=== TELEMETRIA DO PAINEL SOLAR ===" << endl;
         cout << "1. Ativar Celula" << endl;
         cout << "2. Ver Mapa da Matriz" << endl;
@@ -21,46 +25,59 @@ int main() {
         cout << "Escolha uma opcao: ";
         cin >> opcao;
 
-        if (opcao == 1) {
+        if (opcao == 1) 
+        {
             int f, c;
             cout << "Digite a fileira (0-4): ";
             cin >> f;
             cout << "Digite a coluna (0-4): ";
             cin >> c;
 
-            if (matriz_solar[f][c] == 0) {
+            if (matriz_solar[f][c] == 0) 
+            {
                 matriz_solar[f][c] = 1;
                 cout << "Sucesso: Celula solar ativada!" << endl;
-            } else {
+            }
+            else 
+            {
                 cout << "Erro: Celula solar ja esta em operacao!" << endl;
             }
         }
-        else if (opcao == 2) {
+        else if (opcao == 2) 
+        {
             cout << "--- Mapa da Matriz Solar ---" << endl;
-            for (int i = 0; i < 5; i++) {
-                for (int j = 0; j < 5; j++) {
+            for (int i = 0; i < 5; i++) 
+            {
+                for (int j = 0; j < 5; j++) 
+                {
                     cout << "[" << matriz_solar[i][j] << "] ";
                 }
                 cout << endl;
             }
         }
-        else if (opcao == 3) {
+        else if (opcao == 3) 
+        {
             break;
         }
-        else {
+        else 
+        {
             cout << "Opcao invalida. Tente novamente." << endl;
         }
     }
 
-    // Relatorio final: percorre a matriz uma ultima vez
     int ativas = 0;
     int inativas = 0;
 
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            if (matriz_solar[i][j] == 1) {
+    for (int i = 0; i < 5; i++) 
+    {
+        for (int j = 0; j < 5; j++) 
+        {
+            if (matriz_solar[i][j] == 1) 
+            {
                 ativas = ativas + 1;
-            } else {
+            }
+            else 
+            {
                 inativas = inativas + 1;
             }
         }
