@@ -1,13 +1,15 @@
 package org.example;
 
 public class Alienigena implements Sobrenatural {
-    private String nome;
+    private String nomeAlienigena;
+
     public Alienigena(String nome) {
-        this.nome = nome;
+        this.nomeAlienigena = nome;
     }
 
     @Override
     public void manifestar() {
-        System.out.println(nome + " apareceu com sua nave espacial!");
+        String mensagem = nomeAlienigena + " chegou a bordo da sua nave espacial!";
+        System.out.println(mensagem);
     }
 }
