@@ -1,15 +1,20 @@
 package org.example;
 
 public class Mago extends Morador {
-    private String feitico;
+    private String magia;
 
-    public Mago(String nome, String feitico) {
+    public Mago(String nome, String magia) {
         super(nome);
-        this.feitico = feitico;
+        this.magia = magia;
+    }
+
+    public String getMagia() {
+        return magia;
     }
 
     @Override
     public void apresentar() {
-        System.out.println("Sou " + getNome() + " e meu feitico e " + feitico + ".");
+        String mensagem = "Eu sou " + getNome() + " e minha magia é " + magia + ".";
+        System.out.println(mensagem);
     }
 }
