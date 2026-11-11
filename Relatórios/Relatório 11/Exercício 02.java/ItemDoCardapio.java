@@ -1,23 +1,24 @@
 package org.example;
 
 public class ItemDoCardapio {
-    private String nome;
-    private double preco;
+    private String nomeItem;
+    private double valor;
 
     public ItemDoCardapio(String nome, double preco) {
-        this.nome = nome;
-        this.preco = preco;
+        this.nomeItem = nome;
+        this.valor = preco;
     }
 
     public String getNome() {
-        return nome;
+        return nomeItem;
     }
 
     public double getPreco() {
-        return preco;
+        return valor;
     }
 
+    // Item comum: o preço final é o próprio preço, sem desconto
     public double precoFinal() {
-        return preco;
+        return valor;
     }
 }
