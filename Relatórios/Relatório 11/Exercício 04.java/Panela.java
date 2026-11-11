@@ -1,12 +1,13 @@
 package org.example;
 
 public class Panela {
-    private String material;
+    private String tipoMaterial;
+
     public Panela(String material) {
-        this.material = material;
+        this.tipoMaterial = material;
     }
 
     public String getMaterial() {
-        return material;
+        return tipoMaterial;
     }
 }
