@@ -2,16 +2,16 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        ItemDoCardapio cafe = new ItemDoCardapio("Cafe coado", 8.00);
-        ItemDoCardapio curry = new ItemDoCardapio("Curry da casa", 25.00);
-        ItemDoCardapio combo = new ComboLeblanc("Combo cafe + curry", 30.00);
+        ItemDoCardapio cafeCoado = new ItemDoCardapio("Café coado", 8.00);
+        ItemDoCardapio curryDaCasa = new ItemDoCardapio("Curry da casa", 25.00);
+        ItemDoCardapio comboCafeCurry = new ComboLeblanc("Combo café + curry", 30.00);
 
-        CafeLeblanc leblanc = new CafeLeblanc();
+        CafeLeblanc cafeteria = new CafeLeblanc();
 
-        leblanc.adicionar(cafe);
-        leblanc.adicionar(curry);
-        leblanc.adicionar(combo);
+        cafeteria.adicionar(cafeCoado);
+        cafeteria.adicionar(curryDaCasa);
+        cafeteria.adicionar(comboCafeCurry);
 
-        leblanc.mostrarCardapio();
+        cafeteria.mostrarCardapio();
     }
 }
