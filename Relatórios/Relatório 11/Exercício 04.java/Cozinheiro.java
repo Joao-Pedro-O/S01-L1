@@ -2,26 +2,27 @@ package org.example;
 import java.util.ArrayList;
 
 public class Cozinheiro {
-    private String nome;
-    private Panela panela;
-    private ArrayList<Monstro> ingredientes;
+    private String nomeCozinheiro;
+    private Panela panelaDeCozinha;
+    private ArrayList<Monstro> listaDeIngredientes;
 
     public Cozinheiro(String nome, String materialDaPanela) {
-        this.nome = nome;
-        panela = new Panela(materialDaPanela);
-        ingredientes = new ArrayList<>();
+        this.nomeCozinheiro = nome;
+        panelaDeCozinha = new Panela(materialDaPanela);
+        listaDeIngredientes = new ArrayList<>();
     }
 
     public void adicionarIngrediente(Monstro monstro) {
-        ingredientes.add(monstro);
+        listaDeIngredientes.add(monstro);
     }
 
     public void servirBanquete() {
-        System.out.println("Cozinheiro: " + nome);
-        System.out.println("Panela: " + panela.getMaterial());
+        System.out.println("Chef: " + nomeCozinheiro);
+        System.out.println("Material da panela: " + panelaDeCozinha.getMaterial());
 
-        for (Monstro monstro : ingredientes) {
-            System.out.println(monstro.getNome() + " - " + monstro.receita());
+        for (Monstro ingrediente : listaDeIngredientes) {
+            String prato = ingrediente.getNome() + " - " + ingrediente.receita();
+            System.out.println(prato);
         }
     }
 }
