@@ -1,5 +1,5 @@
 package org.example;
 
-public interface Sobrenatural {
+public interface Sobrenatural  {
     void manifestar();
 }
