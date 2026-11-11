@@ -1,14 +1,16 @@
 package org.example;
 
 public abstract class Monstro {
-    private String nome;
+    private String nomeMonstro;
+
     public Monstro(String nome) {
-        this.nome = nome;
+        this.nomeMonstro = nome;
     }
 
     public String getNome() {
-        return nome;
+        return nomeMonstro;
     }
 
+    // Cada monstro define como vira prato
     public abstract String receita();
 }
