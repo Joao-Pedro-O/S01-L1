@@ -1,13 +1,15 @@
 package org.example;
 
 public class EspiritoYoukai implements Sobrenatural {
-    private String nome;
+    private String nomeEspirito;
+
     public EspiritoYoukai(String nome) {
-        this.nome = nome;
+        this.nomeEspirito = nome;
     }
 
     @Override
     public void manifestar() {
-        System.out.println(nome + " surgiu em meio a uma nevoa misteriosa!");
+        String mensagem = nomeEspirito + " apareceu envolto em uma névoa misteriosa!";
+        System.out.println(mensagem);
     }
 }
