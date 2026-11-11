@@ -1,15 +1,16 @@
 package org.example;
 
 public abstract class Morador {
-    private String nome;
+    private String nomeMorador;
 
     public Morador(String nome) {
-        this.nome = nome;
+        this.nomeMorador = nome;
     }
 
     public String getNome() {
-        return nome;
+        return nomeMorador;
     }
 
+    // Cada tipo de morador define como se apresenta
     public abstract void apresentar();
 }
