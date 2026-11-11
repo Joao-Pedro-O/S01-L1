@@ -7,6 +7,6 @@ public class Mandragora extends Monstro {
 
     @Override
     public String receita() {
-        return "assada com legumes.";
+        return "assada no forno junto com legumes.";
     }
 }
