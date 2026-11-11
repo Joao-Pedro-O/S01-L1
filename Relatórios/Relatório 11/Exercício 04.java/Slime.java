@@ -7,6 +7,6 @@ public class Slime extends Monstro {
 
     @Override
     public String receita() {
-        return "frito com alho e ervas.";
+        return "frito na frigideira com alho e ervas.";
     }
 }
