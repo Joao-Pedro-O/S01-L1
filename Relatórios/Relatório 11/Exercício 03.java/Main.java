@@ -2,16 +2,16 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Alienigena alienigena = new Alienigena("Okarun");
-        EspiritoYoukai espirito = new EspiritoYoukai("Turbo Vovo");
+        Alienigena okarun = new Alienigena("Okarun");
+        EspiritoYoukai turboVovo = new EspiritoYoukai("Turbo Vovo");
 
-        MapaDeAvistamentos mapa = new MapaDeAvistamentos();
+        MapaDeAvistamentos mapaDoBairro = new MapaDeAvistamentos();
 
-        mapa.registrar("Escola", alienigena);
-        mapa.registrar("Tunel", espirito);
+        mapaDoBairro.registrar("Escola", okarun);
+        mapaDoBairro.registrar("Túnel", turboVovo);
 
-        mapa.investigar("Escola");
-        mapa.investigar("Tunel");
-        mapa.investigar("Parque");
+        mapaDoBairro.investigar("Escola");
+        mapaDoBairro.investigar("Túnel");
+        mapaDoBairro.investigar("Parque");
     }
 }
