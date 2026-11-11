@@ -10,4 +10,7 @@ public class ComboLeblanc extends ItemDoCardapio {
     @Override
     public double precoFinal() {
         double valorOriginal = getPreco();
-        double valorComDesconto =
+        double valorComDesconto = valorOriginal - (valorOriginal * DESCONTO);
+        return valorComDesconto;
+    }
+}
