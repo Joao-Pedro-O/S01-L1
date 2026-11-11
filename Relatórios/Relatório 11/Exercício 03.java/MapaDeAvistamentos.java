@@ -2,22 +2,23 @@ package org.example;
 import java.util.HashMap;
 
 public class MapaDeAvistamentos {
-    private HashMap<String, Sobrenatural> avistamentos;
+    private HashMap<String, Sobrenatural> registros;
+
     public MapaDeAvistamentos() {
-        avistamentos = new HashMap<>();
+        registros = new HashMap<>();
     }
 
-    public void registrar(String local, Sobrenatural ser) {
-        avistamentos.put(local, ser);
+    public void registrar(String local, Sobrenatural criatura) {
+        registros.put(local, criatura);
     }
 
     public void investigar(String local) {
-        Sobrenatural ser = avistamentos.get(local);
+        Sobrenatural encontrada = registros.get(local);
 
-        if (ser == null) {
-            System.out.println(local + " esta tranquilo.");
+        if (encontrada == null) {
+            System.out.println("Nada de estranho em " + local + ", está tudo calmo.");
         } else {
-            ser.manifestar();
+            encontrada.manifestar();
         }
     }
 }
