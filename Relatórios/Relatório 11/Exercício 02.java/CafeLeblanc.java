@@ -2,18 +2,21 @@ package org.example;
 import java.util.ArrayList;
 
 public class CafeLeblanc {
-    private ArrayList<ItemDoCardapio> cardapio;
+    private ArrayList<ItemDoCardapio> itens;
+
     public CafeLeblanc() {
-        cardapio = new ArrayList<>();
+        itens = new ArrayList<>();
     }
 
-    public void adicionar(ItemDoCardapio item) {
-        cardapio.add(item);
+    public void adicionar(ItemDoCardapio novoItem) {
+        itens.add(novoItem);
     }
 
     public void mostrarCardapio() {
-        for (ItemDoCardapio item : cardapio) {
-            System.out.println(item.getNome() + " - R$ " + String.format("%.2f", item.precoFinal()));
+        System.out.println("Cardápio do Café Leblanc:");
+        for (ItemDoCardapio atual : itens) {
+            double preco = atual.precoFinal();
+            System.out.printf("%s - R$ %.2f%n", atual.getNome(), preco);
         }
     }
 }
